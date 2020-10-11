@@ -1,0 +1,289 @@
+:root{
+    --primary-color:#e50914;
+    --dark-color:#141414;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    background-color: #000;
+    color: #999;
+}
+
+ul{
+    list-style: none;
+}
+
+h1,h2,h3,h4{
+    color: #fff;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+p{
+    margin: 8px 0;
+}
+
+img{
+    width: 100%;
+}
+
+.showcase{
+    width: 100%;
+    height: 93vh;
+    position: relative;
+    background: url('https://i.ibb.co/vXqDmnh/background.jpg') no-repeat center center/cover;
+    box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+   
+}
+
+.showcase:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-color: black;
+   
+} 
+
+.showcase-top{
+    position: relative;
+    height: 90px;
+    z-index: 2;
+}
+
+.showcase-top img{
+    width: 170px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    
+}
+
+.showcase-top a{
+    float: right;
+    margin-top: 45px;
+    margin-right: 20px;
+}
+
+.showcase-content{
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 72px;
+    z-index: 2;
+}
+
+.showcase-content h1{
+    font-size: 5.2em;
+    line-height: 1.1;
+    margin:0 0 2rem
+
+}
+
+.showcase-content p{
+    font-weight: 400;
+    font-size: 1.9em;
+    color: white;
+    margin:0 0 2rem;
+}
+
+/*Containers*/
+
+.container{
+    max-width: 70%;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+.btn{
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 6.4px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+    border-radius: 2px;
+}
+
+.btn:hover{
+    opacity: 0.9;
+}
+
+.btn-rounded{
+    border-radius: 5px;
+}
+
+.btn-xl{
+    font-size: 32px;
+    padding: 24px 32px;
+    text-transform: uppercase;
+}
+
+.tabs{
+    background-color: var(--dark-color);
+    padding-top: 1em;
+    border-bottom: 3px solid #3d3d3d;
+}
+
+.tabs .container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1em;
+    justify-content: center;    
+}
+
+.tab-item{
+    text-align: center;
+    margin-right: 23px;
+}
+
+.tabs p{
+    font-size: 1.2em;
+    padding-top: 0.5em;
+}
+
+.tabs .container > div{
+    padding: 1.5em 0;
+}
+
+.tabs .container > div:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.tab-border{
+    border-bottom: var(--primary-color) 4px solid;
+}
+
+.tab-content{
+    padding-top: 1.1em;
+    color: white;
+}
+
+#tab-1-content .tab-1-content-inner{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2em;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-xl{
+    font-size: 2.em;
+    margin-bottom: 1em;
+}
+
+.text-lg{
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    
+}
+
+.text-md {
+	margin-bottom: 1.5rem;
+	font-size: 1.2rem;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-dark {
+	color: #999;
+}
+
+.tab-2-content-top{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.tab-2-content-bottom{
+
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-gap: 1em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.loc{
+   height: 45px;
+   text-align: center;
+   padding:12px 0;
+}
+
+.table{
+    width: 100%;
+    margin-top: 2em;
+    text-align: center;
+    border-spacing: 0;
+}
+.table thead th{
+    text-transform: uppercase;
+    padding: 0.8em;
+}
+
+.table tbody tr td{
+    padding: 0.8em 1.2em;
+    color: #999;
+}
+
+ td:first-child{
+    text-align: left;
+}
+
+tbody tr:nth-child(odd){
+    background-color: #222;
+}
+
+.footer-cols{
+    max-width: 75%;
+    display: grid;
+    align-items: center;
+    margin: 1em auto;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media(max-width: 960px){
+    .showcase{
+        height: 70vh;
+    }
+
+    .hide-sm{
+        display: none;
+    }
+
+}
+
+#tab-1-content,
+#tab-2-content,
+#tab-3-content {
+	display: none;
+	opacity: 0;
+}
+
+.show {
+	display: block !important;
+	opacity: 1 !important;
+	transition: all 1000 ease-in;
+}
